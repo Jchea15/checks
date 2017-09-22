@@ -21,3 +21,8 @@ class Square(Checks):
     def squares_28(self):
         """square.c computes square of 28 as 784"""
         self.spawn("./square 28").stdout("^784\n","784\n")
+    
+    @check("compiles")
+    def squares_-5(self):
+        """square.c computes square of -5 as 25"""
+        self.spawn("./square -5").stdout("^25\n", "25\n")
